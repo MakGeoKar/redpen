@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-caveat {
+    font-family: 'Caveat', cursive;
+  }
+  .font-sans-app {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Make entire web application behave strictly like a native iPad/tablet app:
+   NO accidental text selection anywhere by Apple Pencil, stylus, touch, or mouse! */
+*,
+*::before,
+*::after {
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  user-select: none !important;
+  -webkit-user-drag: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Allow text selection ONLY in form text inputs and textareas when actively typing */
+input,
+textarea {
+  -webkit-user-select: text !important;
+  user-select: text !important;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #FAF8F5;
+  color: #1E293B;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-touch-callout: none;
+  overscroll-behavior-y: none;
+  touch-action: pan-y;
+}
+
+/* Prevent callout & selection on canvas */
+canvas {
+  touch-action: none !important;
+  -webkit-touch-callout: none !important;
+  user-select: none !important;
+}

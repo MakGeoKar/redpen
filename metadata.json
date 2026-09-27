@@ -1,0 +1,8 @@
+{
+  "name": "Red Pen",
+  "description": "An AI math teacher that watches a student write a solution by hand and circles the first mistake in real time.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
